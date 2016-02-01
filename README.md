@@ -12,7 +12,7 @@ emitter.Emit(myEvent);
 
 And let the gossip classes do their job. 
 
-That's how I came to the idea that owr dispatcher (the EventEmitter class) needed a way to get rid of those affairs, then, the `IObserverStorage` and the `IObserversInvoker` came into play. One finds the neighbours and the other spreads the gossip.
+That's how I came to the idea that our dispatcher (the EventEmitter class) needed a way to get rid of those affairs, then, the `IObserverStorage` and the `IObserversInvoker` came into play. One finds the neighbours and the other spreads the gossip.
 
 ## Usage
 
@@ -161,7 +161,7 @@ This library lets you be creative in how to implement the aspects of the emitter
 
 ## Next things I'll do
 
-* Publish to nuget.
+* ~~Publish to nuget.~~
 * HangFire invoker (I need it for my job, that's why it is first).
 * Some handy extension methods. (myStorage.Cached(); to name one).
 * Ninject integration.
