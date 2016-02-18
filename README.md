@@ -14,6 +14,16 @@ And let the gossip classes do their job.
 
 That's how I came to the idea that our dispatcher (the EventEmitter class) needed a way to get rid of those affairs, then, the `IObserverStorage` and the `IObserversInvoker` came into play. One finds the neighbours and the other spreads the gossip.
 
+## Install
+
+Use Nuget
+
+```
+PM> Install-Package Events
+```
+
+Compile it, it doesn't need to install or configure weird things ;)
+
 ## Usage
 
 First, Define your event:
