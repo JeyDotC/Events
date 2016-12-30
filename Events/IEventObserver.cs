@@ -8,7 +8,7 @@ namespace Events
 {
     public interface IEventObserver { }
 
-    public interface IEventObserver<TEvent> : IEventObserver
+    public interface IEventObserver<in TEvent> : IEventObserver
     {
         void On(TEvent evnt);
     }

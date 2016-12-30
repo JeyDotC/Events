@@ -13,7 +13,8 @@ namespace Events.Tests
         private static readonly IObserverStorage _observers = new MemoryObserverStorage(
             new January(),
             new February(),
-            new March()
+            new March(),
+            new April() // This one will not listen to the HelloWorldEvent.
         );
 
         [TestMethod]
@@ -39,6 +40,18 @@ namespace Events.Tests
             emitter.Emit(evnt);
 
             Assert.IsTrue(Constants.ExpectedResultForHelloWorldEvent.IsMatch(evnt.Data));
+        }
+
+        [TestMethod]
+        public void ContravariantTest()
+        {
+            var emitter = new EventEmitter(_observers);
+
+            var evnt = new HelloOceanEvent();
+
+            emitter.Emit(evnt);
+
+            Assert.AreEqual("January, February, March, April", evnt.Data);
         }
     }
 }

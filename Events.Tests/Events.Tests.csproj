@@ -53,8 +53,10 @@
   <ItemGroup>
     <Compile Include="AssemblyScanningTests.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Events\HelloOceanEvent.cs" />
     <Compile Include="Events\HelloWorldEvent.cs" />
     <Compile Include="InMemoryTests.cs" />
+    <Compile Include="Observers\April.cs" />
     <Compile Include="Observers\March.cs" />
     <Compile Include="Observers\February.cs" />
     <Compile Include="Observers\January.cs" />
